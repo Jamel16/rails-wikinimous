@@ -1,0 +1,14 @@
+<h1>Edit article</h1>
+
+<%= form_with model: @article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <div>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to list", articles_path %>
+<%= link_to "Back to article", article_path(@article.id) %>
